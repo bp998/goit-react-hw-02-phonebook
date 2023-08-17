@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ContactListElement from './ContactListElement';
 import PropTypes from 'prop-types';
+import css from './ContactList.module.css';
 
 class ContactList extends Component {
   render() {
@@ -8,7 +9,7 @@ class ContactList extends Component {
     return (
       <ul>
         {contacts.map(contact => (
-          <li key={contact.id}>
+          <li className={css.element} key={contact.id}>
             <ContactListElement
               onClick={onClick}
               name={contact.name}

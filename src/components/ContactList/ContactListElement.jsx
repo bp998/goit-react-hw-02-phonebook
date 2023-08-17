@@ -7,7 +7,7 @@ class ContactListElement extends Component {
     const { name, number, id, onClick } = this.props;
 
     return (
-      <div>
+      <div className={css.list}>
         {name}: {number}
         <button onClick={() => onClick(id)} id={id} type="button">
           Delete
@@ -18,10 +18,10 @@ class ContactListElement extends Component {
 }
 
 ContactListElement.propTypes = {
-  id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  number: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+  id: PropTypes.string,
+  name: PropTypes.string,
+  number: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default ContactListElement;

@@ -7,7 +7,7 @@ class Filter extends Component {
     const { onChange } = this.props;
     return (
       <label>
-        <p>Find contacts by name</p>
+        <p className={css.search}>Find contacts by name</p>
         <input onChange={onChange} type="text" name="filter" />
       </label>
     );
@@ -15,7 +15,7 @@ class Filter extends Component {
 }
 
 Filter.propTypes = {
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
 };
 
 export default Filter;
